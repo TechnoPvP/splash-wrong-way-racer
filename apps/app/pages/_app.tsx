@@ -1,6 +1,10 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import '../lib/styles/reset.scss';
+import '../lib/styles/root.scss';
+import '../lib/styles/global.scss';
+import { ThemeProvider } from '@emotion/react';
+import { MUI_THEME } from '../lib/constants/theme';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,9 +12,12 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to app!</title>
       </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
+
+      <ThemeProvider theme={MUI_THEME}>
+        <main className="app">
+          <Component {...pageProps} />
+        </main>
+      </ThemeProvider>
     </>
   );
 }
