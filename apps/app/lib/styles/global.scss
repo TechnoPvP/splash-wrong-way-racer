@@ -19,3 +19,11 @@ body,
   color: var(--color-white);
   font-family: 'Saira', sans-serif;
 }
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-alpha-purple);
+}

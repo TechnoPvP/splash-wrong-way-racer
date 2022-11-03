@@ -20,7 +20,7 @@ export const MUI_THEME = createTheme({
   typography: {
     fontFamily: 'Saira, sans-serif',
     h4: { fontSize: 40, lineHeight: '36px' },
-    h6: {fontSize: 16, lineHeight: '21px'}
+    h6: { fontSize: 16, lineHeight: '21px' },
   },
   components: {
     MuiCssBaseline: {
@@ -71,6 +71,20 @@ export const MUI_THEME = createTheme({
         root: sx({
           p: 0,
         }),
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          '&.MuiTab-root': {
+            color: 'rgba(255, 255, 255, 0.5)',
+          },
+          '&.Mui-selected': {
+            color: 'white',
+            textShadow:
+              '0px 0px 10px rgba(255, 255, 255, 0.25), 0px 2px 0px rgba(0, 0, 0, 0.25)',
+          },
+        },
       },
     },
     MuiListItemText: {
