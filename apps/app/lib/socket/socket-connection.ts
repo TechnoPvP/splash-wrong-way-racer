@@ -1,4 +1,5 @@
 import { io, Socket } from 'socket.io-client';
+import { RoadLane } from '../componenets/game/logic.game';
 
 const SOCKER_HOST = 'https://wrongway-racer-api.spls.ae/';
 
@@ -12,11 +13,10 @@ export interface PlayerPayload {
   worstRecord: number;
 }
 
-type EnemySpawnedPayload = 'right' | 'left' | ' center';
 
 interface ListenerEvents {
   newChatJoin: (player: PlayerPayload) => void;
-  newEnemy: (location: EnemySpawnedPayload) => void;
+  newEnemy: (location: RoadLane) => void;
   players: (players: PlayerPayload[]) => void;
   newChat: (player: string) => void;
 }

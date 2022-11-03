@@ -12,9 +12,9 @@ const ChatMessage: FC<ChatNotficationProps> = ({ type, ...props }) => {
     <>
       <div className="message">
         <Typography display="inline" variant="body2" fontWeight={300}>
-          <div className={classNames('content', `type--${type}`)}>
+          <span className={classNames('content', `type--${type}`)}>
             {props.children}
-          </div>
+          </span>
         </Typography>
       </div>
 

@@ -38,13 +38,6 @@ const ChatWindow: FC<ChatWindowProps> = ({ messages }) => {
         .chat :global(.chat__inner) {
           height: 300px;
           overflow-y: auto;
-
-          &::-webkit-scrollbar {
-            width: 5px;
-          }
-          &::-webkit-scrollbar-thumb {
-            background-color: var(--color-alpha-purple);
-          }
         }
       `}</style>
     </div>

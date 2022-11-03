@@ -112,13 +112,6 @@ const LeaderBoard: FC<LeaderBoardProps> = ({
         .leaderboard :global(.leaderboard__ranks) {
           overflow-y: auto;
           height: 300px;
-
-          &::-webkit-scrollbar {
-            width: 5px;
-          }
-          &::-webkit-scrollbar-thumb {
-            background-color: var(--color-alpha-purple);
-          }
         }
 
         .leaderboard :global(.last-record-text) {
